@@ -7,7 +7,7 @@ const Carousel = () => {
         id="carouselExampleFade"
         className="carousel slide carousel-fade"
         data-bs-ride="carousel"
-        data-bs-interval="2500" // smoother timing
+        data-bs-interval="2500" 
         style={{ objectFit: "contain" }}
       >
         <div className="carousel-inner" id="carousel">
@@ -51,7 +51,7 @@ const Carousel = () => {
               }}
             >
               <img
-                src="https://cdn.pixabay.com/photo/2017/01/22/19/20/burger-2002915_1280.jpg"
+                src="https://cdn.pixabay.com/photo/2023/05/29/17/01/hamburger-8026582_1280.jpg"
                 className="d-block w-100"
                 style={{
                   height: "90vh",
@@ -76,7 +76,7 @@ const Carousel = () => {
 
           <div className="carousel-item">
             <img
-              src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pasta-3007375_1280.jpg"
+              src="https://cdn.pixabay.com/photo/2010/12/13/10/00/pasta-2093_1280.jpg"
               className="d-block w-100"
               style={{
                 height: "90vh",
@@ -102,7 +102,7 @@ const Carousel = () => {
 
           <div className="carousel-item">
             <img
-              src="https://cdn.pixabay.com/photo/2017/12/09/08/18/sushi-3007403_1280.jpg"
+              src="https://cdn.pixabay.com/photo/2018/08/03/08/33/food-3581341_1280.jpg"
               className="d-block w-100"
               style={{
                 height: "90vh",

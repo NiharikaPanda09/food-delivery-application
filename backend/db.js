@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { data } = require('react-router-dom');
+
 const dotenv = require('dotenv');
 
 dotenv.config({path:"../.env"});
