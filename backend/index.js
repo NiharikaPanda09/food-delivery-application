@@ -5,15 +5,31 @@ const port = 5000
 const mongoDB = require('./db')
 mongoDB()
 
-app.use((req,res,next)=>{
-  res.setHeader("Access-Control-Allow-Origin","https://food-delivery-application-3-r5t3.onrender.com");
+app.use((req, res, next) => {
+  const allowedOrigins = [  
+    "*"
+  ];
+
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
-  
-  )
-  next()
-})
+  );
+
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+
+  // ✅ Handle preflight requests (very important)
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+
+  next();
+});
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -26,7 +42,6 @@ app.use("/api",require("./Routes/OrderData"))
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-
 
 
 
